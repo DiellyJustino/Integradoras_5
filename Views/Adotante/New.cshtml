@@ -1,57 +1,114 @@
 ﻿@model CaoLendario.Models.ViewModels.AdotantesListViewModel
 
 @{
-    ViewData["Title"] = "New";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "New";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div class="content">
-        <form asp-action="New">
-            <h2 style="margin:25px;" class="sub-title">Dados pessoais:</h2>
-            <textarea style="margin:25px;" class="input" placeholder="Nome" asp-for="adotante.nome"></textarea>
-            <textarea style="margin:25px;" class="input" placeholder="Email" asp-for="adotante.email"></textarea>
-            <input style="margin:25px;" class="input" type="password" placeholder="Senha" asp-for="adotante.senha" />
-            <textarea style="margin:25px;" class="input" placeholder="Endereço" asp-for="adotante.endereco"></textarea>
-            <input style="margin:25px;" class="input" type="date" placeholder="Data de Nascimento" asp-for="adotante.data_nascimento">
-            <input style="margin:25px;" class="input" type="number" placeholder="CEP" asp-for="adotante.cep">
-            <textarea style="margin:25px;" class="input" placeholder="UF" asp-for="adotante.uf"></textarea>
-            <input style="margin:25px;" class="input" type="number" placeholder="Telefone/Celular" asp-for="adotante.telefone">
-            <div class="form">
-                <select asp-for="adotante.moradia" class="input">
-                    <option value="Casa">Casa</option>
-                    <option value="Apartamento">Apartamento</option>
-                    <option value="Sítio">Sítio</option>
-                    <option value="Outros">Outros</option>
-                </select>
-                <h2 class="sub-title">Preferência de animal:</h2>
-                <select asp-for="adotante.porte" class="input" placeholder="Porte">
-                    <option value="Pequeno">Pequeno</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Grande">Grande</option>
-                    <option value="Indiferente">Indiferente</option>
-                </select>
-                <select asp-for="adotante.filhote" class="input" placeholder="Tipo">
-                    <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
-                    <option value="Indiferente">Indiferente</option>
-                </select>
-                <select asp-for="adotante.castrado" class="input" placeholder="Castramento">
-                    <option value="Sim">Sim</option>
-                    <option value="Não">Não</option>
-                    <option value="Indiferente">Indiferente</option>
-                </select>
-                <select asp-for="adotante.sexo" class="input" placeholder="Sexo">
-                    <option value="Fêmea">Fêmea</option>
-                    <option value="Macho">Macho</option>
-                </select>
-                <select asp-for="adotante.talimentacao" class="input" placeholder="Alimentação">
-                    <option value="Raçao">Ração</option>
-                    <option value="Comida">Comida</option>
-                    <option value="Ambos">Ambos</option>
-                    <option value="Outros">Outros</option>
-                </select>
-                <input style="margin:25px;" type="submit" value="Registrar-se" class="btn-solid" />
-            </div>
-        </form>
-    </div>    
-     
+<section class="content-view">
+	<h3>Dados pessoais</h3>
+	<div class="container-animal">
+		<div class="dados-animal grid-12">
+			<div class="head-animal"></div>
+			<div class="grid-12">
+				<div class="box-descricao">
+					<label for="nome">Nome:</label>
+					<input type="text" id="nome"
+						   class="input input_form" asp-for="adotante.nome" />
+				</div>
+				<div class="box-descricao">
+					<label for="nome" >E-mail:</label>
+					<input type="text" id="email"
+						   class="input input_form" asp-for="adotante.email" />
+				</div>
+				<div class="box-descricao">
+					<label for="nome" >Endereço:</label>
+					<input type="text" id="endereco"
+						   class="input input_form" asp-for="adotante.endereco" />
+				</div>
+				<div class="box-descricao">
+					<label for="nome" >Data de nascimento:</label>
+					<input type="text" id="data_nascimento" placeholder="00/00/0000"
+						   class="input input_form" asp-for="adotante.data_nascimento" />
+				</div>
+				<div class="box-descricao">
+					<label for="nome" >CEP:</label>
+					<input type="text" id="cep"
+						   class="input input_form" asp-for="adotante.cep" />
+				</div>
+				<div class="box-descricao">
+					<label for="nome" >UF</label>
+					<input type="text" id="uf"
+						   class="input input_form" asp-for="adotante.uf" />
+				</div>
+				<div class="box-descricao">
+					<label for="nome" >Telefone:</label>
+					<input type="text" id="telefone"
+						   class="input input_form" asp-for="adotante.telefone" />
+				</div>
+				<div class="box-descricao">
+					<label for="nome" >Senha:</label>
+					<input type="text" id="senha"
+						   class="input input_form" asp-for="adotante.senha" />
+				</div>
+				<div class="box-descricao">
+					<label for="nome" >Casa:</label>
+					<select asp-for="adotante.moradia" class="input input_form" style="width:300px">
+						<option value="Casa">Casa</option>
+						<option value="Apartamento">Apartamento</option>
+						<option value="Sítio">Sítio</option>
+						<option value="Outros">Outros</option>
+					</select>
+				</div>
+				<h2>Preferencia de animal:</h2>
+				<div class="box-descricao">
+					<label for="nome">Porte:</label>
+					<select asp-for="adotante.porte" class="input input_form" placeholder="Porte" style="width:50%">
+						<option value="Pequeno">Pequeno</option>
+						<option value="Médio">Médio</option>
+						<option value="Grande">Grande</option>
+						<option value="Indiferente">Indiferente</option>
+					</select>
+				</div>
+				<div class="box-descricao">
+					<label for="nome">É filhote?</label>
+					<select asp-for="adotante.filhote" class="input" placeholder="Tipo" style="height: 50px; width: 40%;">
+						<option value="Sim">Sim</option>
+						<option value="Não">Não</option>
+						<option value="Indiferente">Indiferente</option>
+					</select>
+				</div>
+				<div class="box-descricao">
+					<label for="nome">É castrado?:</label>
+					<select asp-for="adotante.castrado" class="input" placeholder="Castramento" style="height: 50px; width: 30%;">
+						<option value="Sim">Sim</option>
+						<option value="Não">Não</option>
+						<option value="Indiferente">Indiferente</option>
+					</select>
+				</div>
+				<div class="box-descricao">
+					<label for="nome">Qual o sexo?:</label>
+					<select asp-for="adotante.sexo" class="input" placeholder="Sexo" style="height: 50px; width: 20% ">
+						<option value="Fêmea">Fêmea</option>
+						<option value="Macho">Macho</option>
+					</select>
+				</div>
+				<div class="box-descricao">
+					<label for="nome">Qual é sua alimentação?</label>
+					<select asp-for="adotante.talimentacao" class="input" placeholder="Alimentação" style="height: 50px; width: 30%;">
+						<option value="Raçao">Ração</option>
+						<option value="Comida">Comida</option>
+						<option value="Ambos">Ambos</option>ta
+						<option value="Outros">Outros</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form class="botoes-delete container-animal" asp-action="Edit">
+		<button style="margin:20px;border-radius:20%;width:12%; height:12%">
+			Registrar-se
+		</button>
+		<a asp-action="List">Voltar</a>
+	</form>
+</section>

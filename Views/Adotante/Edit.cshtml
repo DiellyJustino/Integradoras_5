@@ -1,97 +1,102 @@
 ﻿@model CaoLendario.Models.Adotante
 
 @{
-    ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Edit";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
 
-<h4>Adotante</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="moradia" class="control-label"></label>
-                <select asp-for="moradia" class="form-control"></select>
-                <span asp-validation-for="moradia" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="porte" class="control-label"></label>
-                <select asp-for="porte" class="form-control"></select>
-                <span asp-validation-for="porte" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="filhote" class="control-label"></label>
-                <select asp-for="filhote" class="form-control"></select>
-                <span asp-validation-for="filhote" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="castrado" class="control-label"></label>
-                <select asp-for="castrado" class="form-control"></select>
-                <span asp-validation-for="castrado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="sexo" class="control-label"></label>
-                <select asp-for="sexo" class="form-control"></select>
-                <span asp-validation-for="sexo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="talimentacao" class="control-label"></label>
-                <select asp-for="talimentacao" class="form-control"></select>
-                <span asp-validation-for="talimentacao" class="text-danger"></span>
-            </div>
-            <input type="hidden" asp-for="UserID" />
-            <div class="form-group">
-                <label asp-for="nome" class="control-label"></label>
-                <input asp-for="nome" class="form-control" />
-                <span asp-validation-for="nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="email" class="control-label"></label>
-                <input asp-for="email" class="form-control" />
-                <span asp-validation-for="email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="senha" class="control-label"></label>
-                <input asp-for="senha" class="form-control" />
-                <span asp-validation-for="senha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="data_nascimento" class="control-label"></label>
-                <input asp-for="data_nascimento" class="form-control" />
-                <span asp-validation-for="data_nascimento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="endereco" class="control-label"></label>
-                <input asp-for="endereco" class="form-control" />
-                <span asp-validation-for="endereco" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="cep" class="control-label"></label>
-                <input asp-for="cep" class="form-control" />
-                <span asp-validation-for="cep" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="uf" class="control-label"></label>
-                <input asp-for="uf" class="form-control" />
-                <span asp-validation-for="uf" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="telefone" class="control-label"></label>
-                <input asp-for="telefone" class="form-control" />
-                <span asp-validation-for="telefone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+<section class="content-view">
+	<h3>Editar dados:</h3>
+	<div class="container-animal">
+		<div class="dados-animal grid-12">
+			<div class="head-animal"></div>
+			<div class="grid-12">
+				<div class="box-descricao">
+					<label asp-for="moradia" class="control-label"></label>
+					<input asp-for="moradia" class="form-control" style="width:20%"></input>
+					<span asp-validation-for="moradia" class="text-danger"></span>
+					<input readonly type="text" asp-for="nome" />
+				</div>
+				<div class="box-descricao">
+					<label asp-for="porte" class="control-label"></label>
+					<input asp-for="porte" class="form-control" style="width:20%"></input>
+					<span asp-validation-for="porte" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="filhote" class="control-label"></label>
+					<input asp-for="filhote" class="form-control" style="width:20%"></input>
+					<span asp-validation-for="filhote" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="castrado" class="control-label"></label>
+					<input asp-for="castrado" class="form-control" style="width:20%"></input>
+					<span asp-validation-for="castrado" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="sexo" class="control-label"></label>
+					<input asp-for="sexo" class="form-control" style="width:20%"></input>
+					<span asp-validation-for="sexo" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="talimentacao" class="control-label"></label>
+					<input asp-for="talimentacao" class="form-control" style="width:20%"></input>
+					<span asp-validation-for="talimentacao" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="nome" class="control-label"></label>
+					<input asp-for="nome" class="form-control" style="width:20%" />
+					<span asp-validation-for="nome" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="email" class="control-label"></label>
+					<input asp-for="email" class="form-control" style="width:20%" />
+					<span asp-validation-for="email" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="senha" class="control-label"></label>
+					<input asp-for="senha" class="form-control" style="width:20%" />
+					<span asp-validation-for="senha" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="data_nascimento" class="control-label"></label>
+					<br>
+					<input asp-for="data_nascimento" class="form-control" style="width:20%" />
+					<span asp-validation-for="data_nascimento" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="endereco" class="control-label"></label>
+					<input asp-for="endereco" class="form-control" style="width:20%" />
+					<span asp-validation-for="endereco" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="cep" class="control-label"></label>
+					<input asp-for="cep" class="form-control" style="width:20%" />
+					<span asp-validation-for="cep" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="endereco" class="control-label"></label>
+					<input asp-for="endereco" class="form-control" style="width:20%" />
+					<span asp-validation-for="endereco" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="uf" class="control-label"></label>
+					<input asp-for="uf" class="form-control" style="width:20%" />
+					<span asp-validation-for="uf" class="text-danger"></span>
+				</div>
+				<div class="box-descricao">
+					<label asp-for="telefone" class="control-label"></label>
+					<input asp-for="telefone" class="form-control" style="width:20%" />
+					<span asp-validation-for="telefone" class="text-danger"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form class="botoes-delete container-animal" asp-action="Salvar">
+		<button type="submit" value="Save" class="btn btn-primary"
+				style="margin:20px;border-radius:20%;width:10%; height:10%;">
+			Salvar
+		</button>
+		<a asp-action="List">Voltar</a>
+	</form>
+</section>
