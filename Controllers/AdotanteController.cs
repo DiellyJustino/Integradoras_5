@@ -72,7 +72,9 @@ namespace CaoLendario.Controllers
         [HttpPost]
         public IActionResult New(Adotante adotante)
         {
+
             repositorio.Create(adotante);
+
             return RedirectToAction("Details");
         }
 
